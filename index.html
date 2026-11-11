@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Checking</title>
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  a,.mini-btn{touch-action:manipulation;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+  a:focus,.mini-btn:focus{outline:none}
+  a:focus-visible,.mini-btn:focus-visible{outline:3px solid #1a1a2e;outline-offset:2px}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#faf7f0;color:#1a1a2e;line-height:1.6}
+  header{padding:28px 18px 10px;max-width:760px;margin:0 auto;text-align:center}
+  h1{margin:0 0 4px;font-size:32px}
+  p.sub{margin:0;color:#555}
+  main{max-width:760px;margin:0 auto;padding:10px 18px 40px}
+  .card{background:#fffdf8;border:3px solid #1a1a2e;border-radius:24px;padding:20px;margin:16px 0;box-shadow:8px 8px 0 #1a1a2e,inset 0 2px 0 rgba(255,255,255,.9),inset 0 -6px 12px rgba(0,0,0,.04)}
+  .cat{display:flex;gap:16px;align-items:center;cursor:pointer;text-decoration:none;color:#1a1a2e}
+  .cat:active{transform:translate(4px,4px);box-shadow:4px 4px 0 #1a1a2e}
+  .cat-logo{width:56px;height:56px;flex:none;background:#fff;border:3px solid #1a1a2e;border-radius:18px;padding:5px;box-shadow:4px 4px 0 #1a1a2e}
+  .cat-logo img{width:100%;height:100%;display:block}
+  .grok-badge{width:56px;height:56px;flex:none;background:#1a1a2e;color:#fff;border:3px solid #1a1a2e;border-radius:18px;box-shadow:4px 4px 0 #1a1a2e;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800}
+  .cat h2{margin:0;font-size:22px}
+  .cat p{margin:2px 0 0;color:#555;font-size:14px}
+  .cat .arrow{margin-left:auto;font-size:24px;font-weight:800}
+  .hint{font-size:13px;color:#666;margin:8px 0 0;text-align:center}
+  .dev-badge{display:inline-block;border:2px solid #1a1a2e;border-radius:999px;padding:4px 14px;font-weight:800;background:#fff;box-shadow:3px 3px 0 #1a1a2e;color:#1a1a2e}
+  footer{max-width:760px;margin:0 auto;padding:0 18px 30px;color:#777;font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <h1>★ Star Checking</h1>
+  <p class="sub">Subscription စစ်တာတွေ တစ်နေရာတည်း — နှိပ်ပြီး ရွေးပါ။</p>
+</header>
+<main>
+  <a class="card cat" id="linkChatgpt" href="chatgpt/">
+    <span class="cat-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" onerror="this.style.display='none'"></span>
+    <span>
+      <h2>ChatGPT</h2>
+      <p>Plus / Pro / Free — Session paste လုပ်ပြီး စစ်မယ်။</p>
+    </span>
+    <span class="arrow">→</span>
+  </a>
+
+  <a class="card cat" id="linkGrok" href="grok/">
+    <span class="grok-badge">G</span>
+    <span>
+      <h2>Grok</h2>
+      <p>SuperGrok / Heavy — Login တစ်ခါပဲ, ပြီးရင် Check နှိပ်ရုံပဲ။</p>
+    </span>
+    <span class="arrow">→</span>
+  </a>
+
+  <p class="hint">Session / token ကို ဘယ်နေရာမှ မသိမ်းဘူး။</p>
+</main>
+<footer>Unofficial checkers — OpenAI / xAI နဲ့ မသက်ဆိုင်ပါ။<br><br><span class="dev-badge">Developed by Diameter X</span></footer>
+
+<script>
+// Links: on GitHub Pages the checkers live at /chatgpt/ and /grok/;
+// on the VPS they live at /checker and /grok.
+if(!location.hostname.endsWith('github.io')){
+  document.getElementById('linkChatgpt').href = '/checker';
+  document.getElementById('linkGrok').href = '/grok';
+}
+</script>
+</body>
+</html>
